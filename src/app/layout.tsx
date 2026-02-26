@@ -11,11 +11,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Clawdad | Done-for-You AI Agent Deployment",
   description:
-    "Pre-configured OpenClaw agent systems for your business. Setup in days, not months. We deploy the agents — you close the deals.",
+    "Production OpenClaw agent systems deployed to your infrastructure. Frontier technology, honest deployment, early access pricing. From discovery call to running agents in weeks.",
   openGraph: {
     title: "Clawdad | Done-for-You AI Agent Deployment",
     description:
-      "Pre-configured OpenClaw agent systems deployed to your infrastructure. From discovery call to running agents in days.",
+      "Production OpenClaw agent systems deployed to your infrastructure. Frontier technology, honest deployment, early access pricing.",
     type: "website",
   },
 };

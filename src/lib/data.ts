@@ -8,7 +8,7 @@ export const agentConfigs: AgentConfig[] = [
     name: "GTM Outbound Machine",
     tagline: "Replace your SDR team with a 6-agent pipeline that prospects, qualifies, and books meetings 24/7.",
     agentCount: 6,
-    setupTime: "5-7 days",
+    setupTime: "2-3 weeks",
     pipeline: ["Mine", "Enrich", "Score", "Write", "Send", "Research"],
     outcomes: [
       "Automated lead sourcing from 10+ data providers",
@@ -16,8 +16,8 @@ export const agentConfigs: AgentConfig[] = [
       "CRM-integrated pipeline with auto follow-up",
       "Deliverability monitoring & inbox rotation",
     ],
-    proofQuote: "Replaced a $200K/yr hire with $130/mo in tooling. First qualified meetings booked in week one.",
-    proofAttribution: "B2B SaaS Founder",
+    proofQuote: "Most requested starting architecture. Designed for B2B companies replacing manual outbound with autonomous agent pipelines.",
+    proofAttribution: "Starting config",
     featured: true,
   },
   {
@@ -25,7 +25,7 @@ export const agentConfigs: AgentConfig[] = [
     name: "Real Estate Wholesaler",
     tagline: "Automated deal-finding machine that texts, qualifies, pulls comps, and generates offers.",
     agentCount: 4,
-    setupTime: "3-5 days",
+    setupTime: "2-3 weeks",
     pipeline: ["Text", "Qualify", "Comp", "Offer"],
     outcomes: [
       "Automated skip-tracing & texting campaigns",
@@ -33,15 +33,15 @@ export const agentConfigs: AgentConfig[] = [
       "Instant comp analysis with ARV estimates",
       "Auto-generated offer letters ready to send",
     ],
-    proofQuote: "Processing 50 deals a month on 5 hours of work. The agents handle everything up to the offer.",
-    proofAttribution: "Wholesaler, TX",
+    proofQuote: "Built for high-volume deal flow. Agents handle everything from first contact through offer generation.",
+    proofAttribution: "Starting config",
   },
   {
     id: "local-business-sales",
     name: "Local Business Sales Org",
     tagline: "A full AI sales team: scouts leads, builds intel, crafts outreach, and manages the pipeline.",
     agentCount: 6,
-    setupTime: "7-10 days",
+    setupTime: "3-4 weeks",
     pipeline: ["Scout", "Intel", "Builder", "Outreach", "Closer", "Growth"],
     outcomes: [
       "Local business discovery & verification",
@@ -49,15 +49,15 @@ export const agentConfigs: AgentConfig[] = [
       "Multi-channel outreach (email + LinkedIn + phone)",
       "Pipeline management with stage automation",
     ],
-    proofQuote: "It's like running an org chart of sales reps that never sleep. Three demos booked the first week.",
-    proofAttribution: "Agency Owner",
+    proofQuote: "Our most complex starting architecture. Six coordinated agents running a full sales operation autonomously.",
+    proofAttribution: "Starting config",
   },
   {
     id: "content-engine",
     name: "Content Engine",
     tagline: "Plan, write, and publish content across channels — on autopilot.",
     agentCount: 3,
-    setupTime: "2-3 days",
+    setupTime: "1-2 weeks",
     pipeline: ["Plan", "Write", "Publish"],
     outcomes: [
       "Editorial calendar auto-generated from strategy",
@@ -65,32 +65,31 @@ export const agentConfigs: AgentConfig[] = [
       "Multi-platform publishing (blog, LinkedIn, X)",
       "Performance tracking & topic refinement",
     ],
-    proofQuote: "14 blog posts and 2 newsletters per cycle. Content quality rivals our best human writer.",
-    proofAttribution: "Marketing Director",
+    proofQuote: "Fastest to deploy. Three agents handling the entire content lifecycle from strategy through publishing.",
+    proofAttribution: "Starting config",
   },
 ];
 
 export const proofPoints: ProofPoint[] = [
-  { metric: "$200K → $130/mo", context: "SDR replacement" },
-  { metric: "50 deals/mo", context: "on 5 hrs work" },
-  { metric: "$41K in week 1", context: "pipeline generated" },
-  { metric: "$4,200 saved", context: "per month avg" },
-  { metric: "3 demos", context: "first week live" },
+  { metric: "$9K", context: "flat setup" },
+  { metric: "$1,600/mo", context: "ongoing support" },
+  { metric: "2–4 weeks", context: "to running agents" },
+  { metric: "24/7", context: "autonomous operation" },
+  { metric: "You own it", context: "your infrastructure" },
 ];
 
 export const processSteps: ProcessStep[] = [
   {
     number: "01",
     title: "Discovery Call",
-    description: "30-minute deep dive into your workflow, tech stack, and goals. We map your agent architecture and give you a go/no-go recommendation — no pressure, no pitch.",
-    price: "$150",
-    priceNote: "credited toward build",
+    description: "30-minute deep dive into your workflow, tech stack, and goals. We map your agent architecture and give you a straight answer on fit — no pressure, no pitch.",
+    price: "Free",
   },
   {
     number: "02",
     title: "Architecture & Build",
     description: "We design your agent pipeline, configure OpenClaw, build custom skills, set up integrations, and test everything end-to-end before you touch it.",
-    price: "$1,500–2,500",
+    price: "$9,000",
   },
   {
     number: "03",
@@ -101,24 +100,27 @@ export const processSteps: ProcessStep[] = [
   {
     number: "04",
     title: "Ongoing Support",
-    description: "Optional monthly retainer for monitoring, optimization, new agent builds, and priority support. Or go fully independent — your system, your call.",
-    price: "$500–1,000/mo",
-    priceNote: "or rev share",
+    description: "Monthly retainer for monitoring, optimization, new agent builds, and priority support. Or go fully independent — your system, your call.",
+    price: "$1,600/mo",
   },
 ];
 
 export const faqs: FAQ[] = [
   {
     question: "What is OpenClaw?",
-    answer: "OpenClaw is an open-source AI agent framework that lets you deploy autonomous agents capable of browsing the web, managing files, calling APIs, and executing complex multi-step workflows. Think of it as giving an AI a computer to work from — not just a chat box to type in.",
+    answer: "OpenClaw is a proprietary AI agent framework that deploys autonomous agents capable of browsing the web, managing files, calling APIs, and executing complex multi-step workflows. Think of it as giving an AI a computer to work from — not just a chat box to type in. It's actively evolving technology, and we're transparent about that.",
+  },
+  {
+    question: "Is this technology proven?",
+    answer: "Honest answer: this is frontier technology. OpenClaw is proprietary, actively evolving, and relatively new. We don't have 10 years of case studies. What we do have is production-grade technical capability, deep understanding of the workflows that benefit from autonomous agents, and the integrity to tell you exactly what we know works and what's still experimental. Our clients are early adopters who understand that getting in first means accepting some frontier risk — and that's exactly why the opportunity is so large.",
   },
   {
     question: "Why not just set it up myself?",
-    answer: "You absolutely can — OpenClaw is open source. But most non-technical founders spend 10-40 hours on CLI setup, Node.js configuration, API wiring, and security hardening before a single agent runs. We've done hundreds of deployments. We get you live in days, configured correctly, with production-grade security from the start.",
+    answer: "You can try — but most non-technical founders spend 10-40 hours on CLI setup, Node.js configuration, API wiring, and security hardening before a single agent runs. We've done the hard work of learning this technology so you don't have to. You get production-grade security and a working system in weeks, not months.",
   },
   {
     question: "What if my use case isn't listed?",
-    answer: "The agent configs shown are starting points — our most requested setups. Every deployment is custom-fit to your workflow during the discovery call. If you have a unique use case, we'll design a bespoke agent architecture for it. That's the whole point of the discovery call.",
+    answer: "The agent configs shown are starting architectures — the most common workflows we're designing for. Every deployment is custom-fit to your workflow during the discovery call. If you have a unique use case, we'll design a bespoke agent architecture for it. That's the whole point of the discovery call.",
   },
   {
     question: "How do you handle security?",
@@ -126,15 +128,11 @@ export const faqs: FAQ[] = [
   },
   {
     question: "What are the ongoing costs after setup?",
-    answer: "Your agent infrastructure runs on your own accounts — typically $50-200/mo in API costs depending on usage volume. The optional support retainer ($500-1,000/mo) covers monitoring, optimization, and new builds. You can cancel anytime and keep everything.",
+    answer: "Your agent infrastructure runs on your own accounts — typically $50-200/mo in API costs depending on usage volume. The support retainer ($1,600/mo) covers monitoring, optimization, and adjustments. You can cancel anytime and keep everything you've built.",
   },
   {
     question: "Do I need technical knowledge to run the agents after handoff?",
-    answer: "No. We build dashboards and simple interfaces for managing your agents. The Loom walkthrough covers everything. Most clients manage their systems independently within a week of handoff. If you get stuck, we're a Slack message away during the tuning period.",
-  },
-  {
-    question: "Can I change the agent configuration later?",
-    answer: "Yes — that's the advantage of owning the infrastructure. You can modify prompts, add new skills, adjust workflows, or add entirely new agents. On the support plan, we handle changes for you. Independent clients can modify configs directly or bring us in for specific builds.",
+    answer: "No. We build dashboards and simple interfaces for managing your agents. The Loom walkthrough covers everything. Most clients manage their systems independently within a week of handoff. If you get stuck, we're a message away during the tuning period.",
   },
   {
     question: "How is this different from ChatGPT or other AI tools?",

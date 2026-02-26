@@ -27,17 +27,17 @@ export function CTA() {
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-[-0.04em] mb-6 leading-[0.95]">
             Ready to Deploy
             <br />
-            <span className="text-accent">Your AI Operations Team?</span>
+            <span className="text-accent">Before Your Competitors Know This Exists?</span>
           </h2>
           <p className="text-neutral-500 text-lg md:text-xl font-light leading-relaxed mb-12 max-w-xl mx-auto">
             One discovery call. We&apos;ll map your workflow, recommend an
-            agent architecture, and give you a clear go/no-go.
+            agent architecture, and give you a straight answer on fit.
           </p>
           <Button href={CALENDLY_URL} size="lg">
-            Book Your Discovery Call ($150)
+            Book Your Discovery Call
           </Button>
           <p className="text-neutral-600 text-[13px] mt-4 font-light">
-            30 minutes. Credited toward your build.
+            30 minutes. No pitch. Currently onboarding first cohort — early access pricing available.
           </p>
         </motion.div>
       </div>

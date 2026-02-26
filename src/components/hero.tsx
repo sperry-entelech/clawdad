@@ -41,9 +41,9 @@ export function Hero() {
             <span className="text-accent">You close the deals.</span>
           </h1>
           <p className="text-neutral-500 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed mb-12">
-            Pre-configured OpenClaw agent systems for your business.
+            Production OpenClaw agent systems built for your business.
             <br className="hidden md:block" />
-            Setup in days, not months.
+            Frontier technology. Honest deployment. Early access pricing.
           </p>
         </motion.div>
 
@@ -54,7 +54,7 @@ export function Hero() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <Button href={CALENDLY_URL} size="lg">
-            Book Discovery Call ($150)
+            Book Discovery Call
           </Button>
           <Button href="#agent-showcase" variant="outline" size="lg">
             Browse Agent Configs
