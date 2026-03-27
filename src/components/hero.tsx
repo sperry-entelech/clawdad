@@ -3,18 +3,23 @@
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
 import { CALENDLY_URL } from "@/lib/data";
+import type { HeroData } from "@/types";
 
-export function Hero() {
+interface HeroProps {
+  data: HeroData;
+}
+
+export function Hero({ data }: HeroProps) {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
       {/* Animated dot grid background */}
       <div className="absolute inset-0 pointer-events-none">
-        {/* Amber center glow */}
+        {/* White center glow */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              "radial-gradient(ellipse 50% 40% at 50% 45%, rgba(249,115,22,0.07) 0%, transparent 70%)",
+              "radial-gradient(ellipse 50% 40% at 50% 45%, rgba(255,255,255,0.04) 0%, transparent 70%)",
           }}
         />
         {/* Dot grid pattern */}
@@ -34,16 +39,14 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
         >
-          <p className="section-label mb-8">Done-for-you AI agent deployment</p>
+          <p className="section-label mb-8">{data.sectionLabel}</p>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-[-0.04em] leading-[0.92] mb-6">
-            We deploy the agents.
+            {data.headlineWhite}
             <br />
-            <span className="text-accent">You close the deals.</span>
+            <span className="text-accent">{data.headlineAccent}</span>
           </h1>
           <p className="text-neutral-500 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed mb-12">
-            Production OpenClaw agent systems built for your business.
-            <br className="hidden md:block" />
-            Frontier technology. Honest deployment. Early access pricing.
+            {data.description}
           </p>
         </motion.div>
 
@@ -54,11 +57,13 @@ export function Hero() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <Button href={CALENDLY_URL} size="lg">
-            Book Discovery Call
+            {data.ctaPrimary}
           </Button>
-          <Button href="#agent-showcase" variant="outline" size="lg">
-            Browse Agent Configs
-          </Button>
+          {data.ctaSecondary && (
+            <Button href={data.ctaSecondaryHref || "#agent-showcase"} variant="outline" size="lg">
+              {data.ctaSecondary}
+            </Button>
+          )}
         </motion.div>
 
         {/* Scroll indicator */}

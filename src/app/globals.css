@@ -8,10 +8,10 @@
   --muted: #111111;
   --muted-foreground: #737373;
   --border: #262626;
-  --accent: #F97316;
-  --accent-light: #FB923C;
-  --accent-dark: #EA580C;
-  --accent-muted: rgba(249, 115, 22, 0.12);
+  --accent: #ffffff;
+  --accent-light: #ffffff;
+  --accent-dark: #d4d4d4;
+  --accent-muted: rgba(255, 255, 255, 0.08);
 }
 
 @theme inline {
@@ -59,7 +59,7 @@ body::before {
 }
 
 ::selection {
-  background: rgba(249, 115, 22, 0.25);
+  background: rgba(255, 255, 255, 0.15);
   color: #ffffff;
 }
 
@@ -124,19 +124,19 @@ body::before {
 .gradient-border-accent::before {
   background: linear-gradient(
     135deg,
-    rgba(249, 115, 22, 0.4) 0%,
-    rgba(249, 115, 22, 0.1) 30%,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.05) 30%,
     rgba(255, 255, 255, 0.02) 60%,
-    rgba(249, 115, 22, 0.2) 100%
+    rgba(255, 255, 255, 0.08) 100%
   );
 }
 .gradient-border-accent:hover::before {
   background: linear-gradient(
     135deg,
-    rgba(249, 115, 22, 0.55) 0%,
-    rgba(249, 115, 22, 0.15) 30%,
+    rgba(255, 255, 255, 0.25) 0%,
+    rgba(255, 255, 255, 0.08) 30%,
     rgba(255, 255, 255, 0.05) 60%,
-    rgba(249, 115, 22, 0.3) 100%
+    rgba(255, 255, 255, 0.15) 100%
   );
 }
 
@@ -165,18 +165,18 @@ body::before {
   );
 }
 
-/* Amber-tinted radial glow */
+/* White-tinted radial glow */
 .glow-accent {
   background: radial-gradient(
     ellipse 60% 50% at 50% 50%,
-    rgba(249, 115, 22, 0.06) 0%,
+    rgba(255, 255, 255, 0.04) 0%,
     transparent 70%
   );
 }
 .glow-accent-top {
   background: radial-gradient(
     ellipse 80% 50% at 50% -20%,
-    rgba(249, 115, 22, 0.04) 0%,
+    rgba(255, 255, 255, 0.03) 0%,
     transparent 70%
   );
 }

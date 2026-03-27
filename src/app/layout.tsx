@@ -9,13 +9,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Clawdad | Done-for-You AI Agent Deployment",
+  title: "Ntelech | Systems That Replace Expensive Hires",
   description:
-    "Production OpenClaw agent systems deployed to your infrastructure. Frontier technology, honest deployment, early access pricing. From discovery call to running agents in weeks.",
+    "Productized systems for service businesses. Speed to lead, lead reactivation, cold outreach, and operations dashboards — replacing the roles you can't afford to keep hiring.",
   openGraph: {
-    title: "Clawdad | Done-for-You AI Agent Deployment",
+    title: "Ntelech | Systems That Replace Expensive Hires",
     description:
-      "Production OpenClaw agent systems deployed to your infrastructure. Frontier technology, honest deployment, early access pricing.",
+      "Productized systems for service businesses. Speed to lead, lead reactivation, cold outreach, and operations dashboards.",
     type: "website",
   },
 };

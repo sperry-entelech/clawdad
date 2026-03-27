@@ -2,9 +2,13 @@
 
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
-import { CALENDLY_URL } from "@/lib/data";
+import type { CTAData } from "@/types";
 
-export function CTA() {
+interface CTAProps {
+  data: CTAData;
+}
+
+export function CTA({ data }: CTAProps) {
   return (
     <section className="relative py-32 md:py-44 bg-black overflow-hidden">
       {/* Accent glow background */}
@@ -12,7 +16,7 @@ export function CTA() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 60% 50% at 50% 50%, rgba(249,115,22,0.08) 0%, transparent 70%)",
+            "radial-gradient(ellipse 60% 50% at 50% 50%, rgba(255,255,255,0.04) 0%, transparent 70%)",
         }}
       />
 
@@ -23,21 +27,20 @@ export function CTA() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
         >
-          <p className="section-label mb-6">06 / Get Started</p>
+          <p className="section-label mb-6">{data.sectionLabel}</p>
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-[-0.04em] mb-6 leading-[0.95]">
-            Ready to Deploy
+            {data.headlineWhite}
             <br />
-            <span className="text-accent">Before Your Competitors Know This Exists?</span>
+            <span className="text-accent">{data.headlineAccent}</span>
           </h2>
           <p className="text-neutral-500 text-lg md:text-xl font-light leading-relaxed mb-12 max-w-xl mx-auto">
-            One discovery call. We&apos;ll map your workflow, recommend an
-            agent architecture, and give you a straight answer on fit.
+            {data.description}
           </p>
-          <Button href={CALENDLY_URL} size="lg">
-            Book Your Discovery Call
+          <Button href={data.buttonHref} size="lg">
+            {data.buttonLabel}
           </Button>
           <p className="text-neutral-600 text-[13px] mt-4 font-light">
-            30 minutes. No pitch. Currently onboarding first cohort — early access pricing available.
+            {data.footnote}
           </p>
         </motion.div>
       </div>

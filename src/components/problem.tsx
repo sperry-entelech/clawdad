@@ -2,29 +2,13 @@
 
 import { motion } from "framer-motion";
 import { SectionWrapper } from "./ui/section-wrapper";
+import type { ProblemData } from "@/types";
 
-const painPoints = [
-  {
-    number: "01",
-    title: "10–40 Hours of Setup",
-    description:
-      "Node.js, CLI tools, API keys, skill files, security configuration — OpenClaw is powerful, but the setup curve filters out 95% of non-technical founders before a single agent runs.",
-  },
-  {
-    number: "02",
-    title: "Security Risks",
-    description:
-      "Misconfigured agents leak API keys, overrun rate limits, and expose sensitive data. One wrong permission and your agent has access to everything — with no guardrails.",
-  },
-  {
-    number: "03",
-    title: "95% Never Launch",
-    description:
-      "The power is there. The documentation is there. But the bridge between \"this looks amazing\" and \"I have agents running my business\" — that bridge doesn't exist. Until now.",
-  },
-];
+interface ProblemProps {
+  data: ProblemData;
+}
 
-export function Problem() {
+export function Problem({ data }: ProblemProps) {
   return (
     <SectionWrapper id="problem" glow="top">
       <motion.div
@@ -34,20 +18,19 @@ export function Problem() {
         transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
         className="mb-20"
       >
-        <p className="section-label mb-6">01 / The Problem</p>
+        <p className="section-label mb-6">{data.sectionLabel}</p>
         <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-[-0.04em] mb-6 max-w-3xl leading-[0.95]">
-          The Power Is There.
+          {data.headlineWhite}
           <br />
-          <span className="text-neutral-500">The Bridge Isn&apos;t.</span>
+          <span className="text-neutral-500">{data.headlineGray}</span>
         </h2>
         <p className="text-neutral-500 text-lg md:text-xl max-w-lg font-light">
-          OpenClaw can automate your entire business. But getting it set up?
-          That&apos;s where founders get stuck.
+          {data.description}
         </p>
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-        {painPoints.map((point, index) => (
+        {data.painPoints.map((point, index) => (
           <motion.div
             key={point.number}
             initial={{ opacity: 0, y: 40 }}

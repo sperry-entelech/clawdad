@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SectionWrapper } from "./ui/section-wrapper";
-import { faqs } from "@/lib/data";
+import type { FAQData } from "@/types";
 
 function FAQItem({
   faq,
@@ -35,7 +35,7 @@ function FAQItem({
         <span className="text-base md:text-[17px] font-medium text-white pr-8 group-hover:text-neutral-300 transition-colors tracking-[-0.02em]">
           {faq.question}
         </span>
-        <span className="shrink-0 w-8 h-8 rounded-full border border-white/[0.08] flex items-center justify-center group-hover:border-accent/30 transition-colors">
+        <span className="shrink-0 w-8 h-8 rounded-full border border-white/[0.08] flex items-center justify-center group-hover:border-white/20 transition-colors">
           <motion.svg
             animate={{ rotate: isOpen ? 45 : 0 }}
             transition={{ duration: 0.25, ease: [0.25, 0.1, 0.25, 1] }}
@@ -72,7 +72,11 @@ function FAQItem({
   );
 }
 
-export function FAQ() {
+interface FAQSectionProps {
+  data: FAQData;
+}
+
+export function FAQSection({ data }: FAQSectionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
@@ -85,16 +89,16 @@ export function FAQ() {
           transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
           className="mb-20"
         >
-          <p className="section-label mb-6">05 / Questions</p>
+          <p className="section-label mb-6">{data.sectionLabel}</p>
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-[-0.04em] mb-6 leading-[0.95]">
-            Questions?
+            {data.headlineWhite}
             <br />
-            <span className="text-neutral-500">We Have Answers.</span>
+            <span className="text-neutral-500">{data.headlineGray}</span>
           </h2>
         </motion.div>
 
         <div className="border-t border-white/[0.06]">
-          {faqs.map((faq, index) => (
+          {data.faqs.map((faq, index) => (
             <FAQItem
               key={index}
               faq={faq}

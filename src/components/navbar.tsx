@@ -5,7 +5,12 @@ import { motion } from "framer-motion";
 import { Button } from "./ui/button";
 import { CALENDLY_URL } from "@/lib/data";
 
-export function Navbar() {
+interface NavbarProps {
+  minimal?: boolean;
+  ctaLabel?: string;
+}
+
+export function Navbar({ minimal = false, ctaLabel }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -26,24 +31,29 @@ export function Navbar() {
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 max-w-6xl flex items-center justify-between h-16">
-        <a href="#" className="text-lg font-bold tracking-[-0.03em] text-white">
-          clawdad
+        <a href="/" className="text-lg font-bold tracking-[-0.03em] text-white">
+          Ntelech
         </a>
 
-        <div className="hidden md:flex items-center gap-8">
-          <a href="#agent-showcase" className="text-sm text-neutral-500 hover:text-white transition-colors">
-            Configs
-          </a>
-          <a href="#how-it-works" className="text-sm text-neutral-500 hover:text-white transition-colors">
-            Process
-          </a>
-          <a href="#faq" className="text-sm text-neutral-500 hover:text-white transition-colors">
-            FAQ
-          </a>
-        </div>
+        {!minimal && (
+          <div className="hidden md:flex items-center gap-8">
+            <a href="/speed-to-lead" className="text-sm text-neutral-500 hover:text-white transition-colors">
+              Speed to Lead
+            </a>
+            <a href="/reactivation" className="text-sm text-neutral-500 hover:text-white transition-colors">
+              Reactivation
+            </a>
+            <a href="/outreach" className="text-sm text-neutral-500 hover:text-white transition-colors">
+              Outreach
+            </a>
+            <a href="/ops" className="text-sm text-neutral-500 hover:text-white transition-colors">
+              Ops
+            </a>
+          </div>
+        )}
 
         <Button href={CALENDLY_URL} size="sm">
-          Book Discovery Call
+          {ctaLabel || "Book a Call"}
         </Button>
       </div>
     </motion.nav>

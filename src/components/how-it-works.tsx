@@ -2,9 +2,13 @@
 
 import { motion } from "framer-motion";
 import { SectionWrapper } from "./ui/section-wrapper";
-import { processSteps } from "@/lib/data";
+import type { HowItWorksData } from "@/types";
 
-export function HowItWorks() {
+interface HowItWorksProps {
+  data: HowItWorksData;
+}
+
+export function HowItWorks({ data }: HowItWorksProps) {
   return (
     <SectionWrapper id="how-it-works" glow="top">
       <motion.div
@@ -14,15 +18,14 @@ export function HowItWorks() {
         transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
         className="mb-20"
       >
-        <p className="section-label mb-6">04 / How It Works</p>
+        <p className="section-label mb-6">{data.sectionLabel}</p>
         <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-[-0.04em] mb-6 max-w-3xl leading-[0.95]">
-          From Call to
+          {data.headlineWhite}
           <br />
-          <span className="text-neutral-500">Running Agents</span>
+          <span className="text-neutral-500">{data.headlineGray}</span>
         </h2>
         <p className="text-neutral-500 text-lg md:text-xl max-w-lg font-light">
-          A clear, predictable process. No surprises, no scope creep — just
-          working agents on your infrastructure.
+          {data.description}
         </p>
       </motion.div>
 
@@ -33,7 +36,7 @@ export function HowItWorks() {
           className="hidden sm:block absolute left-1/2 top-8 bottom-8 w-px -translate-x-1/2 pointer-events-none"
           style={{
             background:
-              "linear-gradient(to bottom, transparent, rgba(249,115,22,0.08) 20%, rgba(249,115,22,0.08) 80%, transparent)",
+              "linear-gradient(to bottom, transparent, rgba(255,255,255,0.04) 20%, rgba(255,255,255,0.04) 80%, transparent)",
           }}
         />
         {/* Horizontal connector */}
@@ -41,11 +44,11 @@ export function HowItWorks() {
           className="hidden sm:block absolute top-1/2 left-8 right-8 h-px -translate-y-1/2 pointer-events-none"
           style={{
             background:
-              "linear-gradient(to right, transparent, rgba(249,115,22,0.08) 20%, rgba(249,115,22,0.08) 80%, transparent)",
+              "linear-gradient(to right, transparent, rgba(255,255,255,0.04) 20%, rgba(255,255,255,0.04) 80%, transparent)",
           }}
         />
 
-        {processSteps.map((step, index) => (
+        {data.steps.map((step, index) => (
           <motion.div
             key={step.number}
             initial={{ opacity: 0, y: 40 }}
